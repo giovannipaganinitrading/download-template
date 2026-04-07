@@ -3,9 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>Baixando template...</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #1a1a1a;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+    }
+    .icon {
+      font-size: 80px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      color: #25D366;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+    p {
+      color: #cccccc;
+      font-size: 22px;
+      line-height: 1.5;
+    }
+  </style>
 </head>
 <body>
-  <p>Seu download vai começar automaticamente...</p>
+  <div class="container">
+    <div class="icon">✅</div>
+    <h1>SEU DOWNLOAD VAI COMEÇAR AUTOMATICAMENTE!</h1>
+    <p>Assim que concluir, pode fechar esta página.</p>
+  </div>
   <script>
     fetch("default.tpl")
       .then(function(r) { return r.blob(); })

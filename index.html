@@ -5,11 +5,13 @@
   <title>Baixando template...</title>
 </head>
 <body>
+  <p>Seu download vai começar automaticamente...</p>
   <script>
-    window.location.href = "default.tpl";
+    var a = document.createElement("a");
+    a.href = "default.tpl";
+    a.download = "default.tpl";
+    document.body.appendChild(a);
+    a.click();
   </script>
-  <noscript>
-    <a href="default.tpl">Clique aqui para baixar o template</a>
-  </noscript>
 </body>
 </html>

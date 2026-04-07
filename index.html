@@ -32,6 +32,27 @@
       font-size: 22px;
       line-height: 1.5;
     }
+    .arrow {
+      position: fixed;
+      bottom: 60px;
+      right: 40px;
+      font-size: 60px;
+      color: #25D366;
+      animation: bounce 1s infinite;
+    }
+    .arrow-label {
+      position: fixed;
+      bottom: 120px;
+      right: 20px;
+      color: #25D366;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: center;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(15px); }
+    }
   </style>
 </head>
 <body>
@@ -40,6 +61,8 @@
     <h1>SEU DOWNLOAD VAI COMEÇAR AUTOMATICAMENTE!</h1>
     <p>Assim que concluir, pode fechar esta página.</p>
   </div>
+  <div class="arrow-label">Seu arquivo<br>aparece aqui</div>
+  <div class="arrow">⬇</div>
   <script>
     fetch("default.tpl")
       .then(function(r) { return r.blob(); })

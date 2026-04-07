@@ -7,11 +7,17 @@
 <body>
   <p>Seu download vai começar automaticamente...</p>
   <script>
-    var a = document.createElement("a");
-    a.href = "default.tpl";
-    a.download = "default.tpl";
-    document.body.appendChild(a);
-    a.click();
+    fetch("default.tpl")
+      .then(function(r) { return r.blob(); })
+      .then(function(blob) {
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement("a");
+        a.href = url;
+        a.download = "default.tpl";
+        document.body.appendChild(a);
+        a.click();
+        URL.revokeObjectURL(url);
+      });
   </script>
 </body>
 </html>

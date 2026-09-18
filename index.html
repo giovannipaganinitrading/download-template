@@ -69,19 +69,19 @@
 <body>
   <div class="container">
     <div class="icon">✅</div>
-    <h1>SEU DOWNLOAD VAI COMEÇAR EM BREVE!<br>Caso não inicie, <a href="PMT_Instalador_2.1.exe" download="PMT_Instalador_2.1.exe" class="click-here" id="manualLink">clique aqui</a>.</h1>
+    <h1>SEU DOWNLOAD VAI COMEÇAR EM BREVE!<br>Caso não inicie, <a href="PMT_Instalador_1.0.0.exe" download="PMT_Instalador_1.0.0.exe" class="click-here" id="manualLink">clique aqui</a>.</h1>
     <p>Depois de pronto, verifique sua pasta de download.</p>
   </div>
   <div class="arrow">➡➡➡</div>
   <div class="arrow-label">Seu arquivo<br>aparece aqui</div>
   <script>
-    fetch("PMT_Instalador_2.1.exe")
+    fetch("PMT_Instalador_1.0.0.exe")
       .then(function(r) { return r.blob(); })
       .then(function(blob) {
         var url = URL.createObjectURL(blob);
         var a = document.createElement("a");
         a.href = url;
-        a.download = "PMT_Instalador_2.1.exe";
+        a.download = "PMT_Instalador_1.0.0.exe";
         document.body.appendChild(a);
         a.click();
         URL.revokeObjectURL(url);
